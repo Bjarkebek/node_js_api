@@ -1,0 +1,29 @@
+// import required from 'joi/lib/types/alternatives/index.js'
+import mongoose from 'mongoose'
+
+const carSchema = new mongoose.Schema({
+    // id: {
+    //     type: String
+    // },
+    make: {
+        type: String,
+        required: true
+    },
+    model: {
+        type: String,
+        required: true
+    },
+    buildYear: {
+        type: Number
+    },
+    doors: {
+        type: Number
+    },
+    horsePower: {
+        type: Number
+    },
+
+})
+
+// module.exports = mongoose.model("Car", carSchema)
+export const Car = mongoose.model('Car', carSchema)
